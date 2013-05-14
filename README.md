@@ -1,13 +1,18 @@
 # ExceptionFormatter
 
-*I was sick of writing "#{exception.class.name}: #{exception.message}\\n#{exception.backtrace.join("\\n")}"*
+Note: There is also a gem named [exception-formatter](https://github.com/capita/exception-formatter)
+(dash not underscore) and maybe you're looking for that.
+
+## Purpose
+
+*I was sick of writing "#{exception.class.name}: #{exception.message}\\n#{exception.backtrace.join("\\n")}" and alike.*
 
 Simple formatter for ruby exception messages.
 
 Features:
 
 * Custom format pattern
-* Nested exception support
+* Nested exception support (see gems like [nested_exceptions](https://github.com/pangloss/nested_exceptions), [nestegg](https://github.com/loganb/nestegg), [nesty](https://github.com/skorks/nesty))
 * ActiveRecord:::RecordInvalid exception support
 
 
@@ -70,7 +75,7 @@ Alternatively use instance method:
 
 ## Available pattern
 
-    %b         = exception backtrace joined with "\n"
+    %b         = exception backtrace, lines joined with "\n"
     %c         = cause, the nested exception message (by calling exception.cause.message)
     %c{method} = cause, the nested exception message (by calling exception.method.message)
                  (useful if nested exception does not respond to #cause but to #reason or what ever)
