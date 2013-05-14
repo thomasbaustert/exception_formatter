@@ -34,7 +34,7 @@ If no pattern is given the default pattern is used (see ExceptionFormatter::DEFA
     begin
       ... code ... code ... code
     rescue => ex
-      Rails.logger.error ExceptionFormatter.format(ex)
+      logger.error ExceptionFormatter.format(ex)
     end
 
 Will produce the string:
@@ -48,7 +48,7 @@ Will produce the string:
     begin
       ... code ... code ... code
     rescue => ex
-      Rails.logger.error ExceptionFormatter.format(ex, pattern: "[%k] %m\nStacktrace:\n%b")
+      logger.error ExceptionFormatter.format(ex, pattern: "[%k] %m\nStacktrace:\n%b")
     end
 
 Will produce the string:
@@ -65,7 +65,7 @@ Alternatively use instance method:
     begin
       ... code ... code ... code
     rescue => ex
-      Rails.logger.error FORMATTER.format(ex)
+      logger.error FORMATTER.format(ex)
     end
 
 ## Available pattern
