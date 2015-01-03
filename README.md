@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thomasbaustert/exception_formatter.svg?branch=master)](https://travis-ci.org/thomasbaustert/exception_formatter)
+
 # ExceptionFormatter
 
 Note: There is also a gem named [exception-formatter](https://github.com/capita/exception-formatter)
